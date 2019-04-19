@@ -32,4 +32,5 @@ router.get('/', async (req, res) => {
 router.get('/insert', auth, (req, res) => {
 	console.log('hello');
 })
+
 module.exports = router;

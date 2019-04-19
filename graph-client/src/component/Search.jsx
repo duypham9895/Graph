@@ -87,12 +87,12 @@ class Search extends React.Component{
 			v.selected = '';
 			arrData.push(v.data);
 		}
+		this.props.dispatch(updateVertexList(listVertex));
 
-		if(arrData.includes(form.from) || arrData.includes(form.to) ){
+		if(!arrData.includes(form.from) || !arrData.includes(form.to) ){
+			alert('One of your vertices does not exist');
 			return;
 		}
-
-		this.props.dispatch(updateVertexList(listVertex));
 
 		listVertex[listSelectedSearch[0].index].selected = 'selected';
 		this.props.dispatch(updateSelectedList(listSelectedSearch));
@@ -101,11 +101,10 @@ class Search extends React.Component{
 		const shortestPath = this.props.shortestPath;
 		const previous = this.props.previous;
 
-		this.props.dispatch(updatePathAndDist(previous[listSelectedSearch[1].index], shortestPath[listSelectedSearch[1].index]))
-		// console.log(previous[listSelectedSearch[1].index]);
+		this.props.dispatch(updatePathAndDist(previous[listSelectedSearch[1].index], shortestPath[listSelectedSearch[1].index]));
 	}
 
-	path(index){
+	path(){
 		const props = this.props;
 		var list = [...props.listVertex];
 		var selectedList = [...props.listSelected];
@@ -130,7 +129,7 @@ class Search extends React.Component{
 		}
 		
 		for(var i = 0; i < arrPathSelected.length; i++ ){
-			index = vertexIndexList.indexOf(arrPathSelected[i]);
+			var index = vertexIndexList.indexOf(arrPathSelected[i]);
 
 			index1 = vertexIndexList.indexOf(arrPathSelected[i]);
 			index2 = vertexIndexList.indexOf(arrPathSelected[i+1]);
