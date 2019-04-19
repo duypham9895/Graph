@@ -79,10 +79,17 @@ class Search extends React.Component{
 
 	findPath(){
 		const listSelectedSearch = this.props.listSelectedSearch;
+		const form = this.props.form;
 		var listVertex = [...this.props.listVertex];
+		var arrData = [];
 
 		for( var v of listVertex){
 			v.selected = '';
+			arrData.push(v.data);
+		}
+
+		if(arrData.includes(form.from) || arrData.includes(form.to) ){
+			return;
 		}
 
 		this.props.dispatch(updateVertexList(listVertex));

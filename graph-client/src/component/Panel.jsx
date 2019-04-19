@@ -11,7 +11,6 @@ class Panel extends React.Component{
 	async componentWillMount(){
 		const res = await fetch('https://graph-online.herokuapp.com/api/graphs', {
 			method: 'GET',
-			mode: 'cors',
 			headers:{
 				'Content-Type': 'application/json',
 				'Accept' : 'application/json',
@@ -23,6 +22,7 @@ class Panel extends React.Component{
 			}
 			return null;
 		});
+
 		if(res !== null){
 			this.props.dispatch(updateVertexList(res.vertices));
 			this.props.dispatch(updateEdgeList(res.edges));
@@ -42,9 +42,6 @@ class Panel extends React.Component{
 			this.props.dispatch(updateWeightList(arrWeight));
 
 		}
-
-
-		
 	}
 
 	render(){
