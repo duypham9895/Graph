@@ -8,8 +8,9 @@ import { updateEdgeList, updateWeightList } from '../action/EdgeAction.jsx';
 
 class Panel extends React.Component{
 // https://graph-online.herokuapp.com/api/graphs
+// http://localhost:5000/api/graphs
 	async componentWillMount(){
-		const res = await fetch('http://localhost:5000/api/graphs', {
+		const res = await fetch('https://graph-online.herokuapp.com/api/graphs', {
 			method: 'GET',
 			mode: 'cors',
 			headers:{

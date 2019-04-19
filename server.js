@@ -22,9 +22,7 @@ app.use('/api/users', require('./routes/api/users.js'));
 app.use('/api/graphs', require('./routes/api/graphs.js'));
 
 app.use(function(req, res, next) {
-	console.log('cors');
-	console.log(req.connection.remoteAddress);
-
+	// console.log(req.connection.remoteAddress);
 	res.header("Access-Control-Allow-Origin", "localhost:3000");
 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-auth-token");
 
