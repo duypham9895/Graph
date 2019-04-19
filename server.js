@@ -31,8 +31,8 @@ if(process.env.NODE_ENV === 'production'){
 	app.use(express.static('graph-client/build'));
 	app.get('*', (req, res) => {
 		res.sendFile(path.resolve(__dirname, 'graph-client', 'build', 'index.html'));
-		
+
 	})
 }
 
-app.listen(3000, () => console.log('App started on port ' + 3000));
+app.listen(process.env.PORT || 5000, () => console.log('App started'));
