@@ -319,7 +319,7 @@ class Menu extends React.Component{
 
 					
 						<div onClick={this.simulation.bind(this)}>
-							<i className='fas fa-pen'></i> Simulation
+							<i className='fas fa-project-diagram'></i> Simulation
 						</div>
 					
 

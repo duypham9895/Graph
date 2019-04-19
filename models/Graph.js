@@ -18,6 +18,12 @@ const GraphSchema = new Schema({
 	createdOn: {
 		type: Date,
 		default: Date.now,
+	},
+
+	ipAddress: {
+		type: String,
+		required: true,
+		sparse: true,
 	}
 });
 
