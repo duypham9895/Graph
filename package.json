@@ -1,0 +1,24 @@
+{
+  "name": "graph",
+  "version": "1.0.0",
+  "description": "graph with MERN",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^4.1.0",
+    "config": "^3.1.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "client" : "PORT=3001 npm start -prefix graph-client",
+    "server": "nodemon server.js",
+    "dev" : "concurrently \"npm run server\" \"npm run client\"",
+    "client-install": "npm install --prefix graph-client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix graph-client && npm run build --prefix graph-client"
+  },
+  "author": "Duy Pham",
+  "license": "MIT"
+}

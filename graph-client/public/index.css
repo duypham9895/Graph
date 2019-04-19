@@ -1,0 +1,251 @@
+.node{
+	position: absolute;
+	border-radius: 50%;
+	background-color: orange;
+	border: 3px solid black;
+	width: 50px;
+	height: 50px;
+	transform: translate(-25px,-25px);
+}
+
+.node > .vertex {
+	text-align: center;
+	line-height: 50px;
+}
+
+.edge{
+	height: 5px;
+	width: auto;
+}
+
+.boxshadow{
+	box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+}
+
+/*.parent{
+	background-color: grey;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	top: 0;
+	left: 0;
+}*/
+
+.panel{
+	position: relative;
+	background-color: #EBE8E7;
+	height: 200vh;
+	min-height: 100vh;
+	width: 200vw ;
+	min-width: 100vw ;
+	overflow: auto;
+	/*z-index: -99999;*/
+}
+
+.panel-simulation{
+	position: relative;
+	background-color: #EBE8E7;
+	min-height: 390px;
+	width: 635px;
+	overflow: auto;
+}
+
+.neighbor-simulation {
+	background-color: green;
+}
+
+.visited {
+	background-color: #d1d1e0;
+}
+
+.svg{
+	/*over*/
+	/*position: absolute;*/
+	/*overflow: auto;
+	width: 100%;
+	min-height: 100%;*/
+	/*z-index: 999999;*/
+}
+
+.svg-line{
+	/*stroke:rgb(255,0,0);*/
+	/*stroke-width:2;*/
+}
+
+.svg-line-simulation{
+	stroke:rgb(255,0,0);
+	stroke-width:2;
+}
+
+.highlight{
+	stroke: #44798a !important;
+	stroke-width: 3;
+}
+
+.menu{
+	padding: 5px;
+	box-sizing: border-box;
+	width: 100%;
+	height: auto;
+	background-color: white;
+}
+
+.menu > div {
+
+	min-width: 110px;
+	margin: 0px 2px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 30px;
+	padding: 5px 0;
+	display: inline-block;
+}
+
+.menu > div:hover{
+	box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+}
+
+.hamburger{
+	float: right;
+}
+
+/*.icon-cross{
+	position: relative;
+
+}
+
+.icon-cross::after{
+	content: '';
+    position: absolute;
+    top: 48%;
+    left: -1%;
+    bottom: 48%;
+    right: 84%;
+    background-color: #666666;
+    transform: rotate(145deg);
+}*/
+
+.hidden {
+	display: none;
+}
+
+.form-control {
+    position: relative;
+    width: 100%;
+
+}
+
+.form-control > label {
+    position: absolute;
+    transition: all .2s;
+    z-index: 12;
+}
+
+.form-control > input{
+	padding: 30px 15px;
+	font-size: 22px;
+	border-radius: 5px;
+	margin: 0px -14px;
+}
+
+.form-control > input:valid+label {
+	left: -7px;
+	top: -12px;
+    /*background: white;*/
+    color: #1e87f0;
+    font-weight: 400;
+}
+
+.form-control > input:invalid+label {
+	color: #0061B2;
+	left: 2px;
+	top: 19px;
+}
+
+.selected {
+	background-color: #76ADA0;
+}
+
+.selected-simulation {
+	background-color: #76ADA0;
+}
+
+.weightTable{
+	overflow: auto;
+}
+
+.button-dijkstra{
+	margin-top: 5px;
+	width: 100%;
+	border-radius: 20px;
+}
+
+.text-dijkstra{
+	font-size: 20px;
+}
+
+.custom-modal{
+	opacity: 0.5;
+	transition: all .3s;
+	padding: 15px;
+	position: fixed !important;
+	width: 20vw !important;
+	height: 100vh !important;
+	background-color: #f2f2f2 !important;
+	right: 0 !important;
+	left: unset !important;
+	z-index: 970;
+}
+
+.custom-modal:hover{
+	opacity: 1;
+}
+
+.form-control-search{
+	margin: 15px;
+	padding-right: 15px;
+}
+
+.form-control > .dropdown{
+	transition: all .1s;
+	width: 100%;
+	position: absolute;
+	top: 100%;
+	background-color: white;
+	padding: 10px;
+	z-index: 99;
+	box-sizing: border-box;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	max-height: 150vh;
+}
+
+.form-control > .dropdown:empty {
+	max-height: 0;
+	padding: 0;
+}
+
+.form-control > .dropdown > div {
+	margin: 5px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.form-control > .dropdown > div:hover{
+	background-color: #EFEFEF;
+}
+
+.button-go{
+	width: 35vh;
+	border-radius: 5px;
+}
+
+.search-table{
+	overflow: auto;
+	display: block;
+}
+
+.search-table > tbody:hover{
+	cursor: pointer;
+	color: red;
+}
