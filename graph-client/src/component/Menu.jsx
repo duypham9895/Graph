@@ -62,6 +62,7 @@ class Menu extends React.Component{
 
 				for(var vertex of list){
 					if(form.data === vertex.data){
+						alert('Vertex has already existed');
 						return;
 					}
 				}
@@ -100,6 +101,7 @@ class Menu extends React.Component{
 
 				for(vertex of list){
 					if(form.data === vertex.data){
+						alert('Vertex has already existed');
 						return;
 					}
 				}
