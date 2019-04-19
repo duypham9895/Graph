@@ -272,6 +272,12 @@ class Menu extends React.Component{
 				break;
 			}
 		}
+
+		selectedList.splice(0,1);
+		selectedList.splice(0,1);
+
+		this.props.dispatch(updateSelectedList(selectedList));
+
 		alert('Successful disconnection');
 		this.props.dispatch(updateEdgeList(edgeList));
 
