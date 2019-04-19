@@ -43,6 +43,7 @@ class Menu extends React.Component{
 		const parsedValue = parseInt(value);
 
 		if (  isNaN(parsedValue) ){
+			alert('Weight must be a number');
 			return;
 		} else {
 			edgeForm.weight = parsedValue;
@@ -162,7 +163,7 @@ class Menu extends React.Component{
 					if( (edge.index1 === index1 && edge.index2 === index2) || (edge.index1 === index2 && edge.index2 === index1) ){
 						edge.weight = edgeForm.weight;
 						cleanUp();
-
+						alert('Successful weight change');
 						return;
 					}
 				}
@@ -178,6 +179,7 @@ class Menu extends React.Component{
 					highlight: '',
 				})
 				cleanUp();
+				alert('Create a successful weight');
 				return;
 
 				
@@ -248,6 +250,7 @@ class Menu extends React.Component{
 		var edgeList = [...this.props.edgeList];
 
 		if(selectedList.length < 2 ){
+			alert('There must be two weights');
 			return;
 		}
 
@@ -265,6 +268,7 @@ class Menu extends React.Component{
 				break;
 			}
 		}
+		alert('Successful disconnection');
 		this.props.dispatch(updateEdgeList(edgeList));
 
 	}
