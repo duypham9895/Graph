@@ -248,6 +248,7 @@ class Menu extends React.Component{
 		var selectedList = [...this.props.selectedList];
 		var weightList = [...this.props.weightList];
 		var edgeList = [...this.props.edgeList];
+		var list = [...this.props.list];
 
 		if(selectedList.length < 2 ){
 			alert('There must be two weights');
@@ -259,8 +260,11 @@ class Menu extends React.Component{
 
 		weightList[index1][index2] = Infinity;
 		weightList[index2][index1] = Infinity;
-
 		this.props.dispatch(updateWeightList(weightList));
+
+		list[index1].selected = '';
+		list[index2].selected = '';
+		this.props.dispatch(updateList(list));
 
 		for(var i of edgeList.keys()){
 			if((edgeList[i].index1 === index1 && edgeList[i].index2 === index2) || (edgeList[i].index1 === index2 && edgeList[i].index2 === index1) ){
